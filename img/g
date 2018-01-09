@@ -1,0 +1,24 @@
+digraph {
+	Yn [label=Yn shape=ellipse]
+	Y1 [label=Y1 shape=box]
+	x1 [label=x1 headport=n shape=diamond tailport=w]
+	x2 [label=x2 headport=n shape=diamond tailport=w]
+	Y3 [label=Y3 shape=box]
+	x3 [label=x3 headport=n shape=diamond tailport=w]
+	Y4 [label=Y4 shape=box]
+	Y2 [label=Y2 shape=box]
+	Y5 [label=Y5 shape=box]
+	Yk [label=Yk shape=ellipse]
+	Yn -> Y1
+	Y1 -> x1
+	x1 -> Y2 [label=false]
+	x1 -> x2 [label=true]
+	x2 -> Y5 [label=false]
+	x2 -> Y3 [label=true]
+	Y3 -> x3
+	x3 -> Y1 [label=false]
+	x3 -> Y4 [label=true]
+	Y4 -> Yk
+	Y2 -> Y3
+	Y5 -> Yk
+}
